@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">EKTS مدار فرمان</string>
+    <string name="ai_title">هوش مصنوعی — رسم مدار</string>
+    <string name="run">▶ اجرا</string>
+    <string name="stop">■ توقف</string>
+    <string name="ai_button">🤖 هوش مصنوعی</string>
+    <string name="clear">پاک کردن</string>
+    <string name="save">ذخیره</string>
+    <string name="examples">مدار آماده</string>
+    <string name="delete_selected">حذف قطعه انتخاب‌شده</string>
+    <string name="status_ready">حالت ویرایش — قطعه را از پایین اضافه کن، بکش تا جابه‌جا شود، روی قطعه ضربه بزن تا انتخاب شود.</string>
+    <string name="ai_hint">مثلا: «مدار ستاره مثلث رسم کن» یا «راه‌انداز مستقیم موتور با شستی استارت و استاپ»</string>
+    <string name="ai_send">ارسال به هوش مصنوعی</string>
+    <string name="ai_draw">رسم در ویرایشگر ←</string>
+    <string name="ai_settings">تنظیمات API</string>
+</resources>

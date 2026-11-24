@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="14dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🤖 هوش مصنوعی — رسم مدار"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/green_dark" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="دستور را فارسی بنویس؛ هوش مصنوعی مدار را می‌کشد و در ویرایشگر باز می‌شود."
+            android:textSize="13sp"
+            android:paddingTop="4dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ai_settings"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:paddingTop="14dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ارائه‌دهنده:"
+            android:textSize="13sp" />
+
+        <Spinner
+            android:id="@+id/spProvider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tvProviderHint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:paddingTop="4dp" />
+
+        <EditText
+            android:id="@+id/etBaseUrl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Base URL — مثلا برای اوا: https://api.avalai.ir/v1"
+            android:inputType="textUri"
+            android:textDirection="ltr" />
+
+        <EditText
+            android:id="@+id/etModel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="نام مدل — مثلا gpt-4o-mini"
+            android:inputType="text"
+            android:textDirection="ltr" />
+
+        <EditText
+            android:id="@+id/etApiKey"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="کلید API (فقط روی گوشی خودت ذخیره می‌شود)"
+            android:inputType="textPassword"
+            android:textDirection="ltr" />
+
+        <TextView
+            android:id="@+id/tvSavedStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="هنوز کلیدی ذخیره نشده — یک بار وارد کن، برای همیشه می‌ماند"
+            android:textSize="12sp"
+            android:paddingTop="4dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button android:id="@+id/btnToggleKey" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="نمایش کلید" />
+            <Button android:id="@+id/btnClearKey" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="پاک کردن کلید" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnSaveSettings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="💾 ذخیره تنظیمات — دفعه بعد لازم نیست دوباره وارد کنی" />
+
+        <Button
+            android:id="@+id/btnTest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="تست اتصال" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="دستور تو:"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:paddingTop="14dp" />
+
+        <EditText
+            android:id="@+id/etPrompt"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:gravity="top"
+            android:hint="@string/ai_hint"
+            android:inputType="textMultiLine" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnExample1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="ستاره-مثلث" />
+
+            <Button
+                android:id="@+id/btnExample2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="مستقیم" />
+
+            <Button
+                android:id="@+id/btnExample3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="تایمر + لامپ" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnSend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ai_send" />
+
+        <TextView
+            android:id="@+id/tvAnswer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:paddingTop="10dp" />
+
+        <Button
+            android:id="@+id/btnDraw"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ai_draw"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="بازگشت به ویرایشگر" />
+
+    </LinearLayout>
+</ScrollView>

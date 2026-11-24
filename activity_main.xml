@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="EKTS — مدار فرمان"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/green_dark" />
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/status_ready"
+        android:textSize="13sp"
+        android:paddingTop="4dp"
+        android:paddingBottom="6dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button android:id="@+id/btnRun" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="@string/run" />
+        <Button android:id="@+id/btnAi" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="@string/ai_button" />
+        <Button android:id="@+id/btnExamples" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="@string/examples" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button android:id="@+id/btnUndo" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="↩ برگرد" />
+        <Button android:id="@+id/btnRedo" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="↪ جلو" />
+        <Button android:id="@+id/btnRotate" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="⟳ چرخش" />
+        <Button android:id="@+id/btnProps" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="✎ مشخصات" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button android:id="@+id/btnCheck" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="✓ بررسی خطا" />
+        <Button android:id="@+id/btnBom" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="لیست قطعات" />
+        <Button android:id="@+id/btnExport" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="🖼 PNG" />
+        <Button android:id="@+id/btnMyCircuits" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="مدارهای من" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button android:id="@+id/btnSave" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="@string/save" />
+        <Button android:id="@+id/btnDelete" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="@string/delete_selected" />
+        <Button android:id="@+id/btnClear" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="@string/clear" />
+        <Button android:id="@+id/btnCalc" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="ماشین‌حساب" />
+        <Button android:id="@+id/btnHelp" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="؟ راهنما" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button android:id="@+id/btnZoomOut" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="− زوم" />
+        <Button android:id="@+id/btnZoomIn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="+ زوم" />
+        <Button android:id="@+id/btnWire" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="سیم بین دو قطعه انتخاب‌شده" />
+    </LinearLayout>
+
+    <com.ekts.app.ui.CircuitView
+        android:id="@+id/circuitView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#FFFFFF" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="افزودن قطعه: روی قطعه بزن، بعد روی بوم ضربه بزن تا همان‌جا قرار بگیرد."
+        android:textSize="13sp"
+        android:paddingTop="6dp" />
+
+    <EditText
+        android:id="@+id/etSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="جستجوی قطعه… مثلا تایمر، موتور، کنتاکتور" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/palette"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+    </HorizontalScrollView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="در حالت اجرا، شستی استارت را نگه دار. برای سیم‌کشی دو قطعه را پشت سر هم انتخاب کن."
+        android:textSize="12sp"
+        android:paddingTop="4dp" />
+
+</LinearLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="14dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ماشین‌حساب برق"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/green_dark" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="قانون اهم — دو تا را وارد کن، سومی حساب می‌شود:"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:paddingTop="12dp" />
+        <EditText android:id="@+id/etVolt" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="ولتاژ V (ولت)" android:inputType="numberDecimal" />
+        <EditText android:id="@+id/etAmp" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="جریان I (آمپر)" android:inputType="numberDecimal" />
+        <EditText android:id="@+id/etOhm" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="مقاومت R (اهم)" android:inputType="numberDecimal" />
+        <Button android:id="@+id/btnOhm" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="حساب کن" />
+        <TextView android:id="@+id/tvOhmResult" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="14sp" android:paddingTop="6dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="توان موتور سه‌فاز:"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:paddingTop="16dp" />
+        <EditText android:id="@+id/etMotorVolt" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="ولتاژ خط 400" android:inputType="numberDecimal" />
+        <EditText android:id="@+id/etMotorAmp" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="جریان (آمپر)" android:inputType="numberDecimal" />
+        <EditText android:id="@+id/etCos" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="cosφ — پیش‌فرض 0.85" android:inputType="numberDecimal" />
+        <Button android:id="@+id/btnMotor" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="حساب توان موتور" />
+        <TextView android:id="@+id/tvMotorResult" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="14sp" android:paddingTop="6dp" />
+        <Button android:id="@+id/btnCalcBack" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="بازگشت" />
+    </LinearLayout>
+</ScrollView>
